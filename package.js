@@ -14,10 +14,11 @@ Package.on_use(function(api) {
 		"lib/three.js",
 
 		// Loaders
-		"extras/loaders/OBJMTLLoader.js",
+		"extras/loaders/DDSLoader.js",
 		"extras/loaders/MTLLoader.js",
 		"extras/loaders/OBJLoader.js",
-		"extras/loaders/DDSLoader.js",
+		"extras/loaders/OBJMTLLoader.js",
+		"extras/loaders/STLLoader.js",
 		"extras/loaders/ctm/CTMLoader.js",
 
 		// There doesn't appear to be a good way to package worker scripts in Meteor ATM,
@@ -31,12 +32,10 @@ Package.on_use(function(api) {
 		"extras/exporters/STLBinaryExporter.js",
 		"extras/exporters/STLExporter.js",
 		"extras/exporters/OBJExporter.js",
-		"extras/exporters/MaterialExporter.js",
 
 		// Controls
 		"extras/controls/TrackballControls.js",
 		"extras/controls/OrbitControls.js",
-		// "extras/controls/FlyControls.js",
 
 		// PostProcessing
 		"extras/postprocessing/BloomPass.js",
@@ -79,6 +78,7 @@ Package.on_use(function(api) {
 		"extras/shaders/MirrorShader.js",
 		"extras/shaders/NormalMapShader.js",
 		"extras/shaders/OceanShaders.js",
+		"extras/shaders/ParallaxShader.js",
 		"extras/shaders/RGBShiftShader.js",
 		"extras/shaders/SepiaShader.js",
 		"extras/shaders/SSAOShader.js",
