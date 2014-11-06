@@ -87,6 +87,9 @@ Package.on_use(function(api) {
 		"extras/shaders/UnpackDepthRGBAShader.js",
 		"extras/shaders/VerticalBlurShader.js",
 		"extras/shaders/VerticalTiltShiftShader.js",
-		"extras/shaders/VignetteShader.js"
+		"extras/shaders/VignetteShader.js",
+
+		// THREE.Projector is now here.
+		"extras/renderers/Projector.js"
 	], "client");
 });
