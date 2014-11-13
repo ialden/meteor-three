@@ -1,13 +1,13 @@
 Package.describe({
 	summary: "Three.js core library + several useful extensions from the examples folder.",
-	version: "0.69.1",
+	version: "0.69.2",
 	name: "limemakers:three",
 	git: "https://github.com/limemakers/meteor-three.git",
 });
 
 Package.on_use(function(api) {
 	api.versionsFrom('0.9.0');
-	api.export("THREE", "client");
+	api.export("THREE", ["client", "server"]);
 
 	api.add_files([
 		// Core
@@ -88,5 +88,5 @@ Package.on_use(function(api) {
 		"extras/shaders/VerticalBlurShader.js",
 		"extras/shaders/VerticalTiltShiftShader.js",
 		"extras/shaders/VignetteShader.js"
-	], "client");
+	], ["client", "server"]);
 });
