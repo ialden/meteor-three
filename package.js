@@ -1,13 +1,13 @@
 Package.describe({
 	summary: "Three.js core library + several useful extensions from the examples folder.",
-	version: "0.69.2",
+	version: "0.69.5",
 	name: "limemakers:three",
 	git: "https://github.com/limemakers/meteor-three.git",
 });
 
 Package.on_use(function(api) {
-	api.versionsFrom('0.9.0');
-	api.export("THREE", ["client", "server"]);
+	api.versionsFrom("0.9.0");
+	api.export("THREE");
 
 	api.add_files([
 		// Core
@@ -91,5 +91,5 @@ Package.on_use(function(api) {
 
 		// THREE.Projector is now here.
 		"extras/renderers/Projector.js"
-	], ["client", "server"]);
+	]);
 });
