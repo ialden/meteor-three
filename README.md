@@ -14,4 +14,4 @@ Like any other Meteor package you can simply run the following from the command 
 `meteor add limemakers:three`
 
 ## Notes
-I'll try to keep this package up to date with each Three.js release. If you use this package and want me to add in any other files from the examples folder, send me a message and I'll update this package to include it.
+I'll try to keep this package up to date with each Three.js release. I'm pretty busy though, so feel free to either message me or update the library yourself if I miss a release.
