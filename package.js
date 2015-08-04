@@ -1,8 +1,8 @@
 Package.describe({
 	summary: "Three.js core library + several useful extensions from the examples folder.",
-	version: "0.69.5",
+	version: "0.71.0",
 	name: "limemakers:three",
-	git: "https://github.com/limemakers/meteor-three.git",
+	git: "https://github.com/ottorobotto/meteor-three.git",
 });
 
 Package.on_use(function(api) {
@@ -76,6 +76,7 @@ Package.on_use(function(api) {
 		"extras/shaders/KaleidoShader.js",
 		"extras/shaders/LuminosityShader.js",
 		"extras/shaders/MirrorShader.js",
+		"extras/shaders/NormalDisplacementShader.js",
 		"extras/shaders/NormalMapShader.js",
 		"extras/shaders/OceanShaders.js",
 		"extras/shaders/ParallaxShader.js",
@@ -83,6 +84,7 @@ Package.on_use(function(api) {
 		"extras/shaders/SepiaShader.js",
 		"extras/shaders/SSAOShader.js",
 		"extras/shaders/TechnicolorShader.js",
+		"extras/shaders/ToneMapShader.js",
 		"extras/shaders/TriangleBlurShader.js",
 		"extras/shaders/UnpackDepthRGBAShader.js",
 		"extras/shaders/VerticalBlurShader.js",
