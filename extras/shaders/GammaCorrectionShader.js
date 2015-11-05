@@ -1,15 +1,15 @@
 /**
- * @author alteredq / http://alteredqualia.com/
+ * @author WestLangley / http://github.com/WestLangley
  *
- * Full-screen textured quad shader
+ * Gamma Correction Shader
+ * http://en.wikipedia.org/wiki/gamma_correction
  */
 
-THREE.CopyShader = {
+THREE.GammaCorrectionShader = {
 
 	uniforms: {
 
 		"tDiffuse": { type: "t", value: null },
-		"opacity":  { type: "f", value: 1.0 }
 
 	},
 
@@ -28,16 +28,20 @@ THREE.CopyShader = {
 
 	fragmentShader: [
 
-		"uniform float opacity;",
+		"#define GAMMA_OUTPUT",
+		"#define GAMMA_FACTOR 2",
 
 		"uniform sampler2D tDiffuse;",
 
 		"varying vec2 vUv;",
 
+		THREE.ShaderChunk[ "common" ],
+
 		"void main() {",
 
-			"vec4 texel = texture2D( tDiffuse, vUv );",
-			"gl_FragColor = opacity * texel;",
+			"vec4 tex = texture2D( tDiffuse, vec2( vUv.x, vUv.y ) );",
+
+			"gl_FragColor = vec4( linearToOutput( tex.rgb ), tex.a );",
 
 		"}"
 
