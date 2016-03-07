@@ -17,7 +17,6 @@ Package.on_use(function(api) {
 		"extras/loaders/DDSLoader.js",
 		"extras/loaders/MTLLoader.js",
 		"extras/loaders/OBJLoader.js",
-		"extras/loaders/OBJMTLLoader.js",
 		"extras/loaders/STLLoader.js",
 		"extras/loaders/ctm/CTMLoader.js",
 
@@ -29,9 +28,10 @@ Package.on_use(function(api) {
 		// "extras/loaders/ctm/lzma.js",
 
 		// Exporters
+		"extras/exporters/OBJExporter.js",
 		"extras/exporters/STLBinaryExporter.js",
 		"extras/exporters/STLExporter.js",
-		"extras/exporters/OBJExporter.js",
+		"extras/exporters/TypedGeometryExporter.js",
 
 		// Controls
 		"extras/controls/TrackballControls.js",
@@ -40,6 +40,7 @@ Package.on_use(function(api) {
 		// PostProcessing
 		"extras/postprocessing/BloomPass.js",
 		"extras/postprocessing/BokehPass.js",
+		"extras/postprocessing/ClearPass.js",
 		"extras/postprocessing/DotScreenPass.js",
 		"extras/postprocessing/EffectComposer.js",
 		"extras/postprocessing/FilmPass.js",
@@ -48,6 +49,7 @@ Package.on_use(function(api) {
 		"extras/postprocessing/RenderPass.js",
 		"extras/postprocessing/SavePass.js",
 		"extras/postprocessing/ShaderPass.js",
+		"extras/postprocessing/SMAAPass.js",
 		"extras/postprocessing/TexturePass.js",
 
 		// Shaders
@@ -76,12 +78,12 @@ Package.on_use(function(api) {
 		"extras/shaders/KaleidoShader.js",
 		"extras/shaders/LuminosityShader.js",
 		"extras/shaders/MirrorShader.js",
-		"extras/shaders/NormalDisplacementShader.js",
 		"extras/shaders/NormalMapShader.js",
 		"extras/shaders/OceanShaders.js",
 		"extras/shaders/ParallaxShader.js",
 		"extras/shaders/RGBShiftShader.js",
 		"extras/shaders/SepiaShader.js",
+		"extras/shaders/SMAAShader.js",
 		"extras/shaders/SSAOShader.js",
 		"extras/shaders/TechnicolorShader.js",
 		"extras/shaders/ToneMapShader.js",
