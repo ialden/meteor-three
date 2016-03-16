@@ -1,6 +1,6 @@
 Package.describe({
 	summary: "Three.js core library + several useful extensions from the examples folder.",
-	version: "0.74.0",
+	version: "0.75.0",
 	name: "limemakers:three",
 	git: "https://github.com/ottorobotto/meteor-three.git",
 });
@@ -45,11 +45,13 @@ Package.on_use(function(api) {
 		"extras/postprocessing/EffectComposer.js",
 		"extras/postprocessing/FilmPass.js",
 		"extras/postprocessing/GlitchPass.js",
+		"extras/postprocessing/ManualMSAARenderPass.js",
 		"extras/postprocessing/MaskPass.js",
 		"extras/postprocessing/RenderPass.js",
 		"extras/postprocessing/SavePass.js",
 		"extras/postprocessing/ShaderPass.js",
 		"extras/postprocessing/SMAAPass.js",
+		"extras/postprocessing/TAARenderPass.js",
 		"extras/postprocessing/TexturePass.js",
 
 		// Shaders
@@ -61,6 +63,7 @@ Package.on_use(function(api) {
 		"extras/shaders/BrightnessContrastShader.js",
 		"extras/shaders/ColorCorrectionShader.js",
 		"extras/shaders/ColorifyShader.js",
+		"extras/shaders/CompositeShader.js",
 		"extras/shaders/ConvolutionShader.js",
 		"extras/shaders/CopyShader.js",
 		"extras/shaders/DigitalGlitch.js",
