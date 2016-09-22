@@ -74,6 +74,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 	// Mouse buttons
 	this.mouseButtons = { ORBIT: THREE.MOUSE.LEFT, ZOOM: THREE.MOUSE.MIDDLE, PAN: THREE.MOUSE.RIGHT };
+        this.touchMotions = { ORBIT: THREE.TOUCH.ONE, ZOOM: THREE.TOUCH.TWO, PAN: THREE.TOUCH.THREE};
 
 	// for reset
 	this.target0 = this.target.clone();
@@ -780,9 +781,23 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 		if ( scope.enabled === false ) return;
 
-		switch ( event.touches.length ) {
+                var action = THREE.TOUCH.NONE;
+                                                
+                switch (event.touches.length) {
+                    case scope.touchMotions.ORBIT:
+                        action = THREE.TOUCH.ONE;
+                        break;                    
+                    case scope.touchMotions.ZOOM:
+                        action = THREE.TOUCH.TWO;
+                        break;
+                    case scope.touchMotions.PAN:
+                        action = THREE.TOUCH.THREE;
+                        break;
+                }                             
 
-			case 1:	// one-fingered touch: rotate
+		switch ( action ) {
+
+			case THREE.TOUCH.ONE:	// rotate
 
 				if ( scope.enableRotate === false ) return;
 
@@ -792,7 +807,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 				break;
 
-			case 2:	// two-fingered touch: dolly
+			case THREE.TOUCH.TWO:	// dolly
 
 				if ( scope.enableZoom === false ) return;
 
@@ -802,7 +817,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 				break;
 
-			case 3: // three-fingered touch: pan
+			case THREE.TOUCH.THREE: // pan
 
 				if ( scope.enablePan === false ) return;
 
@@ -833,9 +848,23 @@ THREE.OrbitControls = function ( object, domElement ) {
 		event.preventDefault();
 		event.stopPropagation();
 
-		switch ( event.touches.length ) {
+                var action = THREE.TOUCH.NONE;
+                
+                switch (event.touches.length) {                    
+                    case scope.touchMotions.ORBIT:
+                        action = THREE.TOUCH.ONE;
+                        break;                    
+                    case scope.touchMotions.ZOOM:
+                        action = THREE.TOUCH.TWO;
+                        break;
+                    case scope.touchMotions.PAN:
+                        action = THREE.TOUCH.THREE;
+                        break;
+                } 
 
-			case 1: // one-fingered touch: rotate
+		switch ( action ) {
+
+			case THREE.TOUCH.ONE: // rotate
 
 				if ( scope.enableRotate === false ) return;
 				if ( state !== STATE.TOUCH_ROTATE ) return; // is this needed?...
@@ -844,7 +873,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 				break;
 
-			case 2: // two-fingered touch: dolly
+			case THREE.TOUCH.TWO: // dolly
 
 				if ( scope.enableZoom === false ) return;
 				if ( state !== STATE.TOUCH_DOLLY ) return; // is this needed?...
@@ -853,7 +882,7 @@ THREE.OrbitControls = function ( object, domElement ) {
 
 				break;
 
-			case 3: // three-fingered touch: pan
+			case THREE.TOUCH.THREE: // pan
 
 				if ( scope.enablePan === false ) return;
 				if ( state !== STATE.TOUCH_PAN ) return; // is this needed?...

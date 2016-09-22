@@ -1,8 +1,8 @@
 Package.describe({
-	summary: "Three.js core library + several useful extensions from the examples folder.",
-	version: "0.75.0",
-	name: "limemakers:three",
-	git: "https://github.com/ottorobotto/meteor-three.git",
+	summary: "Fork from limemakers:three    ",
+	version: "0.75.1",
+	name: "ialden:three",
+        git: "https://github.com/ialden/meteor-three"
 });
 
 Package.on_use(function(api) {

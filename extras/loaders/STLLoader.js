@@ -281,7 +281,7 @@ THREE.STLLoader.prototype = {
 	}
 
 };
-
+/*
 if ( typeof DataView === 'undefined' ) {
 
 	DataView = function( buffer, byteOffset, byteLength ) {
@@ -489,3 +489,4 @@ if ( typeof DataView === 'undefined' ) {
 	 };
 
 }
+*/
